@@ -16,36 +16,36 @@ chart_def = """
   },
   title: {
     text: 'Atmosphere Temperature by Altitude',
-    align: 'left'
+    align: 'center'
   },
   subtitle: {
-    text: 'According to the Standard Atmosphere Model',
-    align: 'left'
+    text: '',
+    align: 'center'
   },
   xAxis: {
     reversed: false,
     title: {
       enabled: true,
-      text: 'Altitude'
+      text: 'Date'
     },
     labels: {
-      format: '{value} km'
+      format: '{value}'
     },
     accessibility: {
-      rangeDescription: 'Range: 0 to 80 km.'
+      rangeDescription: ''
     },
     maxPadding: 0.05,
     showLastLabel: true
   },
   yAxis: {
     title: {
-      text: 'Temperature'
+      text: 'Average Rating'
     },
     labels: {
-      format: '{value}°'
+      format: '{value}'
     },
     accessibility: {
-      rangeDescription: 'Range: -90°C to 20°C.'
+      rangeDescription: ''
     },
     lineWidth: 2
   },
@@ -54,7 +54,7 @@ chart_def = """
   },
   tooltip: {
     headerFormat: '<b>{series.name}</b><br/>',
-    pointFormat: '{point.x} km: {point.y}°C'
+    pointFormat: '{point.x}: {point.y}'
   },
   plotOptions: {
     spline: {
@@ -64,7 +64,7 @@ chart_def = """
     }
   },
   series: [{
-    name: 'Temperature',
+    name: 'Average Rating',
     data: [
       [0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
       [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]
